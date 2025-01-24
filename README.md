@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
+1. **Clone โปรเจกต์:** อธิบายขั้นตอนการคัดลอกโปรเจกต์จาก Git repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <https://github.com/KanisphonKonhirungit/backend.git>
+git clone <https://github.com/KanisphonKonhirungit/frontend.git>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Backend และ Frontend:** 
+#Backend
+เปลี่ยนไปที่โฟลเดอร์ backend ด้วยคำสั่ง ใน command:
+```cd backend```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ติดตั้ง dependencies ที่โปรเจกต์นี้ใช้ (เช่น ไฟล์ package.json):
+```npm install```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+รันแอปพลิเคชันในโหมดพัฒนา (development mode):
+```npm run start:dev```
 
-## Learn More
+Frontend:
+เปิดโฟลเดอร์ frontend ใน command:
+```cd frontend```
 
-To learn more about Next.js, take a look at the following resources:
+ติดตั้ง dependencies เช่นกัน:
+```npm install```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+รันแอปพลิเคชันในโหมดพัฒนา:
+```npm run dev```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **การตั้งค่าฐานข้อมูล:** 
+ เปิด XAMPP สำหรับฐานข้อมูล:
+เปิด XAMPP: ให้เปิดโปรแกรม XAMPP บนเครื่องของคุณ
 
-## Deploy on Vercel
+start Apache: เพื่อให้เซิร์ฟเวอร์เว็บทำงาน
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+start MySQL: เพื่อให้ฐานข้อมูล MySQL ทำงาน
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+เปิด MySQL Workbench: เพื่อเชื่อมต่อกับฐานข้อมูล
+สร้างการเชื่อมต่อใหม่ใน MySQL Workbench:
+
+Connection Name: community_db
+Username: root (ถ้าไม่ได้ตั้งรหัสผ่าน)
+Password: ไม่ต้องใส่ (เพราะที่บอกว่าเครื่องไม่มีรหัสผ่าน)
+
+4. **Unit Test: for backend** 
+```npm run test```
+
+5. **Libraries ที่ใช้:** 
+
+TailwindCSS: สำหรับการออกแบบ UI แบบ responsive และสวยงาม
+Axios: ใช้ในการส่ง HTTP request (เช่น การดึงข้อมูลจาก API)
+Jest: ใช้สำหรับการทดสอบ Unit Test และการทดสอบโค้ดใน backend
+Class-validator: ใช้ในการตรวจสอบข้อมูลที่รับจากผู้ใช้ว่าเป็นไปตามเงื่อนไขที่กำหนดหรือไม่
